@@ -1,4 +1,4 @@
-# Previsione del rischio di collisione in orbita per eventi ad alto rischio
+# Classificazione del rischio di collisione in orbita mediante SVM e tecniche Ensemble: una pipeline per l’individuazione automatica di eventi ad alto rischio nei messaggi CDM
 
 Il presente lavoro è stato svolto nell’ambito di un tirocinio curriculare presso il Comando delle Operazioni Spaziali (COS), in collaborazione con la Sapienza Università di Roma, e ha previsto lo sviluppo di un sistema predittivo basato su tecniche di machine learning, in grado di stimare, con almeno due giorni di anticipo, il rischio finale associato a ciascun evento di congiunzione in orbita bassa (LEO), utilizzando esclusivamente le informazioni contenute nei Conjunction Data Messages (CDM), messaggi standardizzati che descrivono le condizioni orbitali relative ai due oggetti coinvolti. 
 
