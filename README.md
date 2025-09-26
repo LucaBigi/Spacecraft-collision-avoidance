@@ -1,31 +1,49 @@
-# Classificazione del rischio di collisione in orbita mediante SVM e tecniche Ensemble: una pipeline per l’individuazione automatica di eventi ad alto rischio nei messaggi CDM
+# Collision Risk Classification in Orbit Using SVM and Ensemble Techniques: A Pipeline for the Automatic Identification of High-Risk Events in CDM Messages
 
-Il presente lavoro è stato svolto nell’ambito di un tirocinio curriculare presso il Comando delle Operazioni Spaziali (COS), in collaborazione con la Sapienza Università di Roma, e ha previsto lo sviluppo di un sistema predittivo basato su tecniche di machine learning, in grado di stimare, con almeno due giorni di anticipo, il rischio finale associato a ciascun evento di congiunzione in orbita bassa (LEO), utilizzando esclusivamente le informazioni contenute nei Conjunction Data Messages (CDM), messaggi standardizzati che descrivono le condizioni orbitali relative ai due oggetti coinvolti. 
+This work was carried out as part of a curricular internship at the **Italian Space Operations Command (COS)**, in collaboration with **Sapienza University of Rome**.  
+The project focused on developing a predictive system based on **machine learning techniques**, capable of estimating, at least two days in advance, the final collision risk associated with each conjunction event in Low Earth Orbit (LEO), using only the information contained in **Conjunction Data Messages (CDM)**, the standardized messages describing the orbital conditions of the two objects involved.  
 
-Come riferimento per la valutazione delle prestazioni dei modelli sviluppati, sono stati utilizzati i dataset e i criteri ufficiali della Spacecraft Collision Avoidance Challenge, promossa dall’Agenzia Spaziale Europea (ESA) nel 2019. 
+For performance evaluation, the project adopted the official datasets and metrics of the **Spacecraft Collision Avoidance Challenge**, organized by the **European Space Agency (ESA)** in 2019.  
 
-Dopo una panoramica delle criticità del problema e dei principali algoritmi esplorati, la tesi si concentra sulla descrizione dettagliata della pipeline finale di classificazione: un sistema multilivello, basato su un’architettura modulare ed ensemble di modelli. Il cuore del sistema è costituito da 56 Support Vector Machine, coordinate attraverso meccanismi di voto e consenso per identificare eventi classificabili con maggiore affidabilità. Gli eventi più incerti vengono gestiti da fasi successive, che impiegano classificatori specializzati addestrati su sottoinsiemi mirati del dataset. 
+After a general overview of the problem and the algorithms explored, the thesis provides a detailed description of the final classification pipeline: a multilayer system, based on a modular architecture and an ensemble of models.  
+At its core, the pipeline relies on **56 Support Vector Machines (SVMs)**, coordinated through voting and consensus mechanisms to identify reliably classifiable events. Uncertain cases are handled by subsequent stages, which employ specialized classifiers trained on targeted subsets of the dataset.  
+In parallel, a regression module was developed to provide a continuous risk estimate for events classified as high-risk. 
 
-A complemento della pipeline di classificazione è stato sviluppato in parallelo un modulo di regressione, in grado di fornire una stima continua del rischio per gli eventi etichettati come ad alto rischio dal modulo di classificazione. l'integrazione dei due modelli è stata testata sul dataset ufficiale della challenge, ed ha ottenuto uno score pari a 0.559, risultato che colloca il modello risultante al secondo posto assoluto tra i 97 team ce hanno partecipato alla Challenge, e al primo posto tra tutti i modelli interamente basati su tecniche di machine learning.
+The integration of the two models was tested on the official dataset of the ESA Spacecraft Collision Avoidance Challenge (2019), using the same evaluation metrics defined by the competition. Although this work did not participate in the Challenge itself, the obtained **score of 0.559** can be directly compared with the official leaderboard: it corresponds to the **2nd best overall result among 97 teams**, and the best result among all approaches entirely based on machine learning techniques.
 
-## Contenuto del repository
+---
 
-- **Tesi completa**: file PDF contenente una descrizione dell'intero lavoro, comprensivo di:
-  - Descrizione del problema
-  - Modelli di Machine Learning testati e utilizzati
-  - Analisi dei risultati e metriche (F2, Recall, FPR, MSEHR, score finale)
-  - Grafici e tabelle dei risultati
-  - Pseudocodici e spiegazioni dettagliate dei modelli
+## References
 
-## Nota sul codice
-
-Il codice originale utilizzato per gli esperimenti **non è pubblico** per motivi di privacy e proprietà intellettuale. Tutti i dettagli sul funzionamento dei modelli e sulla pipeline sono comunque inclusi nella tesi in PDF.
-
-## Licenza
-
-Il contenuto di questo repository è a scopo accademico e informativo. Tutti i materiali sono di proprietà dell’autore e non possono essere copiati o redistribuiti senza autorizzazione.
-
-## Citazioni
-
-per maggiori informazioni sulla **Spacecraft Collision Avoidance Challenge** del 2019, fare riferimento a:
+For further information on the **Spacecraft Collision Avoidance Challenge (2019)**, see:  
 Thomas Uriot et al. “Spacecraft collision avoidance challenge: Design and results of a machine learning competition”. In: Astrodynamics 6.2 (2022), pp. 121–140. doi: 10.1007/s42064-021-0101-5.
+
+---
+
+## Repository Contents
+
+- **Full Thesis (PDF, in Italian)**: a complete description of the work, including:
+  - Problem formulation
+  - Machine Learning models tested and employed
+  - Results and evaluation metrics (F2, Recall, FPR, MSEHR, final score)
+  - Graphs and result tables
+  - Pseudocode and detailed model explanations  
+
+**NOTE**: The thesis document is written in Italian. However, graphs, tables, and pseudocode are in English, making the technical content accessible to non-Italian speakers.  
+
+---
+
+## Code Availability
+
+The original code used for experiments is **not publicly available** due to privacy and intellectual property reasons.   Nevertheless, all methodological details, model designs, and results are fully documented in the thesis (PDF).  
+
+---
+
+## License
+
+This repository is intended for academic and informational purposes.  
+All materials are the intellectual property of the author and may not be copied or redistributed without permission.  
+
+---
+
+
