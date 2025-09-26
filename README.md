@@ -1,4 +1,4 @@
-# Collision Risk Classification in Orbit Using SVM and Ensemble Techniques: A Pipeline for the Automatic Identification of High-Risk Events in CDM Messages
+# Collision Risk Classification in Orbit Using SVM and Ensemble Techniques: A Pipeline for the Automatic Identification of High-Risk Events in CDM Messages 
 
 ## Abstract:
 Master’s thesis carried out at the Italian Space Operations Command (COS) in collaboration with Sapienza University.
