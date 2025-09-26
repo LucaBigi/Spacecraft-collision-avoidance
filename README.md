@@ -45,7 +45,7 @@ Thomas Uriot et al. “Spacecraft collision avoidance challenge: Design and resu
   - Graphs and result tables
   - Pseudocode and detailed model explanations  
 
-**NOTE**: The thesis document is written in Italian. However, graphs, tables, and pseudocode are in English, making the technical content accessible to non-Italian speakers.  
+**NOTE**: The thesis document is written in Italian. However, graphs and tables are in English, making the technical content accessible to non-Italian speakers.  
 
 ---
 
