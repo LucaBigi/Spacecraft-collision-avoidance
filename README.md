@@ -1,15 +1,31 @@
 # Collision Risk Classification in Orbit Using SVM and Ensemble Techniques: A Pipeline for the Automatic Identification of High-Risk Events in CDM Messages
 
-This work was carried out as part of a curricular internship at the **Italian Space Operations Command (COS)**, in collaboration with **Sapienza University of Rome**.  
-The project focused on developing a predictive system based on **machine learning techniques**, capable of estimating, at least two days in advance, the final collision risk associated with each conjunction event in Low Earth Orbit (LEO), using only the information contained in **Conjunction Data Messages (CDM)**, the standardized messages describing the orbital conditions of the two objects involved.  
+## Abstract:
+Master’s thesis carried out at the Italian Space Operations Command (COS) in collaboration with Sapienza University.
+Developed an ensemble ML pipeline for predicting collision risk in Low Earth Orbit from Conjunction Data Messages (CDM).
+Core system based on 56 SVMs with modular architecture and voting mechanisms, plus a regression module for risk estimation.
+On the official ESA dataset, the pipeline achieved a score equivalent to 2nd place among 97 teams in the 2019 ESA Collision Avoidance Challenge.
+The thesis provides full methodological details, pseudocode, and results (code not publicly available).
 
-For performance evaluation, the project adopted the official datasets and metrics of the **Spacecraft Collision Avoidance Challenge**, organized by the **European Space Agency (ESA)** in 2019.  
+--- 
 
-After a general overview of the problem and the algorithms explored, the thesis provides a detailed description of the final classification pipeline: a multilayer system, based on a modular architecture and an ensemble of models.  
-At its core, the pipeline relies on **56 Support Vector Machines (SVMs)**, coordinated through voting and consensus mechanisms to identify reliably classifiable events. Uncertain cases are handled by subsequent stages, which employ specialized classifiers trained on targeted subsets of the dataset.  
-In parallel, a regression module was developed to provide a continuous risk estimate for events classified as high-risk. 
+## Project Overview
+This thesis was developed during a curricular internship at the Italian Space Operations Command (COS), in collaboration with Sapienza University of Rome.
+The project aimed to design a predictive system capable of automatically estimating the final collision risk of Low Earth Orbit (LEO) conjunction events, at least two days in advance, using only the information contained in standardized Conjunction Data Messages (CDM).
 
-The integration of the two models was tested on the official dataset of the ESA Spacecraft Collision Avoidance Challenge (2019), using the same evaluation metrics defined by the competition. Although this work did not participate in the Challenge itself, the obtained **score of 0.559** can be directly compared with the official leaderboard: it corresponds to the **2nd best overall result among 97 teams**, and the best result among all approaches entirely based on machine learning techniques.
+The system was implemented in Python, combining multiple libraries and frameworks:
+   - **PyTorch** for prototyping neural components and optimization routines
+   - **scikit-learn** for preprocessing, classical ML models, and evaluation metrics
+   - **numpy/pandas** for efficient data handling and numerical computation
+   - **matplotlib/seaborn** for visualization and result analysis
+
+The final pipeline adopts a multi-layer modular architecture:
+   - 56 Support Vector Machines (SVMs) coordinated through voting and consensus strategies
+   - Specialized classifiers to handle uncertain or borderline events
+   - A regression module for continuous risk estimation of high-risk cases
+
+For performance evaluation, the system was tested on the ESA Spacecraft Collision Avoidance Challenge (2019) dataset, following the official competition metrics.
+Although this work did not directly participate in the Challenge, the obtained score of 0.559 corresponds to the 2nd best overall result among 97 teams, and the best result among all machine learning–only approaches.
 
 ---
 
@@ -22,7 +38,7 @@ Thomas Uriot et al. “Spacecraft collision avoidance challenge: Design and resu
 
 ## Repository Contents
 
-- **Full Thesis (PDF, in Italian)**: a complete description of the work, including:
+**Full Thesis (PDF, in Italian)**: a complete description of the work, including:
   - Problem formulation
   - Machine Learning models tested and employed
   - Results and evaluation metrics (F2, Recall, FPR, MSEHR, final score)
@@ -43,7 +59,3 @@ The original code used for experiments is **not publicly available** due to priv
 
 This repository is intended for academic and informational purposes.  
 All materials are the intellectual property of the author and may not be copied or redistributed without permission.  
-
----
-
-
