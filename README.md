@@ -19,7 +19,7 @@ The system was implemented in Python, combining multiple libraries and framework
    - **numpy/pandas** for efficient data handling and numerical computation
    - **matplotlib/seaborn** for visualization and result analysis
 
-The final pipeline adopts a multi-layer modular architecture:
+The final pipeline adopts a multi-stage modular architecture:
    - 56 Support Vector Machines (SVMs) coordinated through voting and consensus strategies
    - Specialized classifiers to handle uncertain or borderline events
    - A regression module for continuous risk estimation of high-risk cases
